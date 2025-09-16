@@ -3,5 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('create_unit');
+    return view('welcome');
 });
+
+use App\Http\Controllers\UnitsController;
+
+Route::get('/units', [UnitsController::class, 'index']);
