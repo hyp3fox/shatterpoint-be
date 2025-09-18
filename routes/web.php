@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\UnitController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-use App\Http\Controllers\UnitsController;
-
-Route::get('/units', [UnitsController::class, 'index']);
+Route::get('/units', [UnitController::class, 'index']);

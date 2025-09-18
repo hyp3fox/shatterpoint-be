@@ -1,11 +1,8 @@
 <?php
 
 // routes/api.php
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Api\UnitController;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::get('/users', [UserController::class, 'index']);
+Route::apiResource('units', [UnitController::class]);
